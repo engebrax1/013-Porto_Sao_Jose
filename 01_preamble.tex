@@ -3,7 +3,7 @@
 %\documentclass[chapterprefix=false,appendixprefix=true]{scrreprt}
 \usepackage[printonlyused,withpage]{acronym}
 \usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc} %%%caracteres latinos
+\usepackage[utf8]{inputenc} %%%caracteres latinos
 %\usepackage{lmodern}
 \usepackage{txfonts}
 \usepackage[a4paper, left=3cm, right=2cm, top=4.3cm, bottom=3.7cm]{geometry}
@@ -32,20 +32,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \DeclareRobustCommand{\text}{%
-  \ifmmode\expandafter\text@\else\expandafter\mbox\fi}
+	\ifmmode\expandafter\text@\else\expandafter\mbox\fi}
 \let\nfss@text\text
 \def\text@#1{{\mathchoice
-  {\textdef@\displaystyle\f@size{#1}}%
-  {\textdef@\textstyle\f@size{#1}}%
-  {\textdef@\textstyle\sf@size{#1}}%
-  {\textdef@\textstyle \ssf@size{#1}}%
-  \check@mathfonts
-  }%
+		{\textdef@\displaystyle\f@size{#1}}%
+		{\textdef@\textstyle\f@size{#1}}%
+		{\textdef@\textstyle\sf@size{#1}}%
+		{\textdef@\textstyle \ssf@size{#1}}%
+		\check@mathfonts
+	}%
 }
 \def\textdef@#1#2#3{\hbox{{%
-                    \everymath{#1}%
-                    \let\f@size#2\selectfont
-                    #3}}}
+			\everymath{#1}%
+			\let\f@size#2\selectfont
+			#3}}}
 \makeatother
 % c o m m a n d  \text  f r o m   a m s m a t h
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,23 +80,23 @@
 
 \usepackage[activate={true,nocompatibility}, final, tracking=true, kerning=true, spacing=true factor=1100,stretch=10,shrink=10]{microtype}
 \SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}
-              {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
-
-               6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+	
+	6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
 \microtypecontext{spacing=nonfrench}
 
 \SetExtraKerning[unit=space]
-    {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
-    {\textendash={400,400}, % en-dash, add more space around it
-     "28={ ,150}, % left bracket, add space from right
-     "29={150, }, % right bracket, add space from left
-     \textquotedblleft={ ,150}, % left quotation mark, space from right
-     \textquotedblright={150, }} % right quotation mark, space from left
+{encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
+{\textendash={400,400}, % en-dash, add more space around it
+	"28={ ,150}, % left bracket, add space from right
+	"29={150, }, % right bracket, add space from left
+	\textquotedblleft={ ,150}, % left quotation mark, space from right
+	\textquotedblright={150, }} % right quotation mark, space from left
 
 \SetExtraKerning[unit=space]
-   {encoding={*}, family={qhv}, series={b}, size={large,Large}}
-   {1={-200,-200}, 
-    \textendash={400,400}}
+{encoding={*}, family={qhv}, series={b}, size={large,Large}}
+{1={-200,-200}, 
+	\textendash={400,400}}
 
 \SetTracking{encoding={*}, shape=sc}{40}
 
@@ -115,9 +115,9 @@
 % -> tabela colorida
 \usepackage{colortbl}
 \usepackage{array}
-	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-	\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 %\usepackage[table]{xcolor}
 %%%%%%%%%%%%%%
@@ -130,14 +130,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}
 \usepackage{tikz}
- \usetikzlibrary{fit,
-				arrows,
-				calc,
-				positioning,
-				fillbetween,
-				matrix,
-				plotmarks,
-				dateplot}
+\usetikzlibrary{fit,
+	arrows,
+	calc,
+	positioning,
+	fillbetween,
+	matrix,
+	plotmarks,
+	dateplot}
 \usetikzlibrary{fadings}
 \usepackage[skins]{tcolorbox}
 \usepackage{pgfplots}
@@ -152,19 +152,19 @@
 \usepackage{pdfpages}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{caption}
-	\captionsetup{labelsep=endash,
-					font=small,
-					labelfont=bf,
-					textfont=small,
-					listformat=simple,
-					figurewithin=none,
-					tablewithin=none}
+\captionsetup{labelsep=endash,
+	font=small,
+	labelfont=bf,
+	textfont=small,
+	listformat=simple,
+	figurewithin=none,
+	tablewithin=none}
 %\renewcommand{\thetable}{\thechapter.\arabic{table}}
 %\renewcommand{\thefigure}{\arabic{figure}}
 \usepackage{subcaption}
-	\renewcommand{\thesubfigure}{Fig. \thefigure.\arabic{subfigure}}
+\renewcommand{\thesubfigure}{Fig. \thefigure.\arabic{subfigure}}
 %	\DeclareCaptionSubType*[labelsep]{subfigure}
-	\captionsetup[subfigure]{labelformat=simple,labelsep=space}
+\captionsetup[subfigure]{labelformat=simple,labelsep=space}
 %	listofformat=subsimple}
 %	\captionsetup{lofdepth=2}
 %	\makeatletter
@@ -183,21 +183,21 @@
 
 %%% cabeçalho e rodapé p/ páginas
 \pagestyle{fancy}
-	\fancyhead{} % clear all header fields
-	\chead{T \& C Serviços Geoambientais Ltda.}
-	\rhead{\thepage}
-	\fancyfoot{} % clear all footer fields
-	\cfoot{Catuana Agropecuária LTDA}
-	\renewcommand{\headrulewidth}{1pt} %espessura da linha do cabeçalho
-	\renewcommand{\footrulewidth}{1pt} %espessura da linha do rodapé
+\fancyhead{} % clear all header fields
+\chead{T \& C Serviços Geoambientais Ltda.}
+\rhead{\thepage}
+\fancyfoot{} % clear all footer fields
+\cfoot{Catuana Agropecuária LTDA}
+\renewcommand{\headrulewidth}{1pt} %espessura da linha do cabeçalho
+\renewcommand{\footrulewidth}{1pt} %espessura da linha do rodapé
 \fancypagestyle{plain}{ % cabeçalho e rodapé p/ início de capítulos
-	\fancyhead{} % clear all header fields
-	\chead{T \& C Serviços Geoambientais Ltda.}
-	\rhead{\thepage}
-	\fancyfoot{} % clear all footer fields
-	\cfoot{Catuana Agropecuária LTDA}
-	\renewcommand{\headrulewidth}{1pt} %espessura da linha do cabeçalho
-	\renewcommand{\footrulewidth}{1pt}} %espessura da linha do rodapé
+\fancyhead{} % clear all header fields
+\chead{T \& C Serviços Geoambientais Ltda.}
+\rhead{\thepage}
+\fancyfoot{} % clear all footer fields
+\cfoot{Catuana Agropecuária LTDA}
+\renewcommand{\headrulewidth}{1pt} %espessura da linha do cabeçalho
+\renewcommand{\footrulewidth}{1pt}} %espessura da linha do rodapé
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\headheight}{14.5pt}
 %% F O R M A T A Ç Ã O  D E  C A P Í T U L O S ,  S E Ç Õ E S ...
@@ -216,30 +216,30 @@
 \titlespacing*{\chapter}{0pt}{10pt}{20pt} % espaço entre o cabeçalho e capítulo
 %
 \titleformat{\chapter}[display]
-  {\normalfont %\sffamily
-	\large \bfseries}
-  {\chaptertitlename\ \thechapter}{16pt}{\large \MakeUppercase }
+{\normalfont %\sffamily
+\large \bfseries}
+{\chaptertitlename\ \thechapter}{16pt}{\large \MakeUppercase }
 \titleformat{\section}
-  {\normalfont %\sffamily
-	 \normalsize \bfseries}
-  {\thesection}{1em}{}
+{\normalfont %\sffamily
+\normalsize \bfseries}
+{\thesection}{1em}{}
 \titleformat{\subsection}
 %% subsection format
-  {\normalfont %\sffamily
-	 \normalsize \bfseries}
-  {\thesubsection}{1em}{}
+{\normalfont %\sffamily
+\normalsize \bfseries}
+{\thesubsection}{1em}{}
 %% subsubsection format
 \titleformat{\subsubsection}
-  {\normalfont \MakeLowercase %\sffamily
-	 \normalsize \bfseries}
-  {\thesubsubsection}{1em}{}
+{\normalfont \MakeLowercase %\sffamily
+\normalsize \bfseries}
+{\thesubsubsection}{1em}{}
 %% paragraph format
 \titleformat{\paragraph}
-    {\MakeLowercase \normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+{\MakeLowercase \normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\subparagraph}{\parindent}{3.25ex plus 1ex minus .2ex}{.75ex plus .1ex}
 %% subparagraph format
 \titleformat{\subparagraph}
-    {\MakeLowercase\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+{\MakeLowercase\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
 \titlespacing*{\subparagraph}{\parindent}{3.25ex plus 1ex minus .2ex}{.75ex plus .1ex}
 
 %%%% F O R M A T A Ç Ã O  T Í T U L O  D O  S U M Á R I O
@@ -257,32 +257,32 @@
 %\setlength{\cha}
 
 %add o label Figura - na Lista de Figuras
-	\newlength{\mylen}
-	\renewcommand{\cftfigpresnum}{\figurename\enspace}
-	\renewcommand{\cftfigaftersnum}{ \textendash }
-	\settowidth{\mylen}{\cftfigpresnum}
-	\addtolength{\cftfignumwidth}{\dimexpr\mylen}
-	\setlength{\cftfigindent}{0pt}% no indent
+\newlength{\mylen}
+\renewcommand{\cftfigpresnum}{\figurename\enspace}
+\renewcommand{\cftfigaftersnum}{ \textendash }
+\settowidth{\mylen}{\cftfigpresnum}
+\addtolength{\cftfignumwidth}{\dimexpr\mylen}
+\setlength{\cftfigindent}{0pt}% no indent
 
 %add o label Tabela - na Lista de Tabelas
-	\renewcommand{\cfttabpresnum}{\tablename\enspace}
-	\renewcommand{\cfttabaftersnum}{ \textendash }
-	\settowidth{\mylen}{0.6\cfttabpresnum\cfttabaftersnum}
-	\addtolength{\cfttabnumwidth}{0.7\mylen}
-	\setlength{\cfttabindent}{0pt}% no indent
+\renewcommand{\cfttabpresnum}{\tablename\enspace}
+\renewcommand{\cfttabaftersnum}{ \textendash }
+\settowidth{\mylen}{0.6\cfttabpresnum\cfttabaftersnum}
+\addtolength{\cfttabnumwidth}{0.7\mylen}
+\setlength{\cfttabindent}{0pt}% no indent
 %sumário upper case
 
 % centralizar sumário
-	\renewcommand{\cfttoctitlefont}{\hfill \large \bfseries \MakeUppercase} 
-	\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cfttoctitlefont}{\hfill \large \bfseries \MakeUppercase} 
+\renewcommand{\cftaftertoctitle}{\hfill}
 
 % centralizar lista de figuras
-	\renewcommand{\cftloftitlefont}{\hfill \large \bfseries \MakeUppercase }
-	\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill \large \bfseries \MakeUppercase }
+\renewcommand{\cftafterloftitle}{\hfill}
 
 % centralizar lista de tabelas
-	\renewcommand{\cftlottitlefont}{\hfill \large\bfseries \MakeUppercase }
-	\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill \large\bfseries \MakeUppercase }
+\renewcommand{\cftafterlottitle}{\hfill}
 
 
 % % % A N E X O S % % % 
@@ -308,17 +308,17 @@
 \renewcommand{\appendixname}{ANEXO}
 
 \DeclareRobustCommand{\changetoapp}{%
-	\renewcommand*{\cftchappresnum}{ANEXO\space}%
-	\renewcommand{\cftchapaftersnum}{~\textendash}
-	\settowidth{\temp}{\bfseries\cftchappresnum\cftchapaftersnum}
+\renewcommand*{\cftchappresnum}{ANEXO\space}%
+\renewcommand{\cftchapaftersnum}{~\textendash}
+\settowidth{\temp}{\bfseries\cftchappresnum\cftchapaftersnum}
 % comment the line above out if you include Chapter before the number in the TOC want the Chapter and Appendix TOC entries to line up.
-	\renewcommand{\cftsecaftersnum}{~\textendash}
+\renewcommand{\cftsecaftersnum}{~\textendash}
 
-   \setlength\cftchapnumwidth{\tocnumwidth}
-   \addtolength{\cftchapnumwidth}{\temp}
+\setlength\cftchapnumwidth{\tocnumwidth}
+\addtolength{\cftchapnumwidth}{\temp}
 %%
-	\setlength\cftsecnumwidth{\tocnumwidth}
-	\addtolength{\cftsecnumwidth}{0.35\temp}}
+\setlength\cftsecnumwidth{\tocnumwidth}
+\addtolength{\cftsecnumwidth}{0.35\temp}}
 %%
 \let\oldappendix\appendix
 \renewcommand*{\appendix}{\oldappendix \addtocontents{toc}{\changetoapp}}
@@ -345,23 +345,23 @@
 %	{ 
 %	\IfBooleanTF{#1}
 %	{
-%		\ifnumcomp{#2}{=}{0}{\addcontentsline{toc}{part}{#3} \part*{#3}}{}
-%		\ifnumcomp{#2}{=}{1}{\addcontentsline{toc}{chapter}{#3} \chapter*{\hfill #3 \hfill}}{}
-%		\ifnumcomp{#2}{=}{2}{\addcontentsline{toc}{section}{#3} \section*{#3}}{}
-%		\ifnumcomp{#2}{=}{3}{\addcontentsline{toc}{subsection}{#3} \subsection*{#3}}{}
-%		\ifnumcomp{#2}{=}{4}{\addcontentsline{toc}{subsubsection}{#3} \subsubsection*{#3}}{}
-%		\ifnumcomp{#2}{=}{5}{\paragraph*{#3}}{}
-%		\ifnumcomp{#2}{=}{6}{\subparagraph*{#3}}{}
-%	}
+	%		\ifnumcomp{#2}{=}{0}{\addcontentsline{toc}{part}{#3} \part*{#3}}{}
+	%		\ifnumcomp{#2}{=}{1}{\addcontentsline{toc}{chapter}{#3} \chapter*{\hfill #3 \hfill}}{}
+	%		\ifnumcomp{#2}{=}{2}{\addcontentsline{toc}{section}{#3} \section*{#3}}{}
+	%		\ifnumcomp{#2}{=}{3}{\addcontentsline{toc}{subsection}{#3} \subsection*{#3}}{}
+	%		\ifnumcomp{#2}{=}{4}{\addcontentsline{toc}{subsubsection}{#3} \subsubsection*{#3}}{}
+	%		\ifnumcomp{#2}{=}{5}{\paragraph*{#3}}{}
+	%		\ifnumcomp{#2}{=}{6}{\subparagraph*{#3}}{}
+	%	}
 %	{
-%		\ifnumcomp{#2}{=}{0}{\part{#3}} {}
-%		\ifnumcomp{#2}{=}{1}{\chapter{#3}}{}
-%		\ifnumcomp{#2}{=}{2}{\section{#3}}{}
-%		\ifnumcomp{#2}{=}{3}{\subsection{#3}}{}
-%		\ifnumcomp{#2}{=}{4}{\subsubsection{#3}}{}
-%		\ifnumcomp{#2}{=}{5}{\paragraph{#3}}{}
-%		\ifnumcomp{#2}{=}{6}{\subparagraph{#3}}{}
-%	}
+	%		\ifnumcomp{#2}{=}{0}{\part{#3}} {}
+	%		\ifnumcomp{#2}{=}{1}{\chapter{#3}}{}
+	%		\ifnumcomp{#2}{=}{2}{\section{#3}}{}
+	%		\ifnumcomp{#2}{=}{3}{\subsection{#3}}{}
+	%		\ifnumcomp{#2}{=}{4}{\subsubsection{#3}}{}
+	%		\ifnumcomp{#2}{=}{5}{\paragraph{#3}}{}
+	%		\ifnumcomp{#2}{=}{6}{\subparagraph{#3}}{}
+	%	}
 %
 %	}
 
@@ -396,17 +396,17 @@
 
 \usepackage{cleveref} %referencia
 \usepackage{nameref}
-	\crefname{part}{Parte}{Partes}
-	\crefname{chapter}{Capítulo}{Capítulos}
-	\crefname{section}{Seção}{Seções}
-	\crefname{subsection}{Seção}{Seções}
-	\crefname{subsubsection}{Seção}{Seções}
-	\crefname{figure}{Figura}{Figuras} % changes default behavior to Figure. 1
-	\crefname{table}{Tabela}{Tabelas}
-	\crefname{equation}{Equação}{Equações}
-	\crefname{subfigure}{Figura}{Figuras}
-	\crefname{subsubfigure}{Figura}{Figuras}
-	\crefname{appendix}{Anexo}{Anexos}
+\crefname{part}{Parte}{Partes}
+\crefname{chapter}{Capítulo}{Capítulos}
+\crefname{section}{Seção}{Seções}
+\crefname{subsection}{Seção}{Seções}
+\crefname{subsubsection}{Seção}{Seções}
+\crefname{figure}{Figura}{Figuras} % changes default behavior to Figure. 1
+\crefname{table}{Tabela}{Tabelas}
+\crefname{equation}{Equação}{Equações}
+\crefname{subfigure}{Figura}{Figuras}
+\crefname{subsubfigure}{Figura}{Figuras}
+\crefname{appendix}{Anexo}{Anexos}
 
 \makeatletter
 \let\titlesec@part\part
@@ -419,20 +419,19 @@
 
 %bordas na imagem
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\setlength\fboxsep{0pt}    %%%%%%%%%%%%%%%%%%
-	\setlength\fboxrule{0.75pt}%%%%%%%%%%%%%%%%%%
+\setlength\fboxsep{0pt}    %%%%%%%%%%%%%%%%%%
+\setlength\fboxrule{0.75pt}%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 
 \input{02_capa}
-\input{03_resumo}
-%
+
 
 \import{./01-informacoes/}{00}
 
 
 \input{anexos}
- \import{./02-anexos/}{00}
+\import{./02-anexos/}{01-lista_anexos}
 
 \end{document}
