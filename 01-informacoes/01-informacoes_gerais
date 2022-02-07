@@ -1,0 +1,87 @@
+\chapter{INFORMAÇÕES GERAIS}
+
+\section{Identificação do Profissional ou da Empresa Responsável pelo Laudo}
+
+\subsection*{Nome ou razão social}
+ 
+\begin{table}[htb!]
+	\centering
+	\caption{Nome e razão social}
+	\label{tab:nome}
+	\begin{tabular}{@{\hspace{1cm}}ll}
+	\toprule		
+		\multicolumn{2}{l}{\textbf{Empresa}:}\\\cmidrule{1-1}
+		Razão Social: & T \& C Serviços Geoambientais LTDA\\
+		\addlinespace
+	 	\multicolumn{2}{l}{\textbf{Profissional responsável}:}\\\cmidrule{1-1}
+		Nome: & Crislaine Aline Campana\\		
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\subsection*{Número do CNPJ e Registro no Cadastro Técnico Federal (empresa) ou número de registro no conselho de classe (profissional);}
+
+\begin{table}[htb!]
+	\centering
+	\caption{Empresa e responsável técnico}
+	\label{tab:cpf}
+	\begin{tabular}{@{\hspace{1cm}}ll}
+		\toprule		
+		\multicolumn{2}{l}{\textbf{Empresa}:}\\\cmidrule{1-1}
+		CNPJ: & 13.257.061/0001-80\\
+		Conselho de Classe & CREA-PR 53653\\
+
+		\addlinespace
+		\multicolumn{2}{l}{\textbf{Profissional responsável}:}\\\cmidrule{1-1}
+		CPF: & 052.241.329-32\\
+		Conselho de classe: & CREA-PR-103920/D	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\clearpage
+
+\subsection*{Endereço completo, telefone, e-mail;}
+
+\begin{table}[htb!]
+	\centering
+	\caption{Endereço do responsável}
+	\label{tab:end}
+	\begin{tabular}{ll}
+		\toprule
+Endereço: & Rua José Rodrigues de Oliveira, 454 - Jardim Monte Cristo\\
+CEP: & 87.706-448\\
+Cidade/UF: & Paranavaí/PR\\
+Tel.:  & (44) 9 9800-8693\\
+e-mail: & araucariapa@hotmail.com\\
+\bottomrule
+	\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\subsection*{Pessoa de contato (nome completo, endereço, telefone, e-mail).}
+
+\begin{table}[htb!]
+	\centering
+	\caption{Contato - Responsável}
+	\label{tab:resp}
+	\begin{tabular}{ll}
+		\toprule
+		
+Nome: & Rosemary Tuzi Domiciliano\\
+Endereço: & Rua José Rodrigues de Oliveira, 454 - Jardim Monte Cristo\\
+CEP: & 87.706-448\\
+Cidade/UF: & Paranavaí/PR\\
+Tel. & (44) 3423-9956\\
+Cel. & (44) 9 9800-8693\\
+e-mail: & araucariapa@hotmail.com\\
+\bottomrule
+
+	\end{tabular}
+\end{table}
+
+\FloatBarrier
